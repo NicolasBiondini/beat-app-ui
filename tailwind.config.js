@@ -3,7 +3,11 @@ module.exports = {
   // https://tailwindcss.com/docs/just-in-time-mode
   // mode: "jit",
   theme: {
-    extend: {},
+    extend: {
+      backgroundImage: {
+        "signin-pattern": "url(/src/images/background.jpg)",
+      },
+    },
   },
   variants: {},
   plugins: [],

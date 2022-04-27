@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useNavigate, useLocation, Navigate } from "react-router-dom";
 import toast, { Toaster } from "react-hot-toast";
 import { simpleValidator } from "../helpers/validators";
@@ -25,8 +25,6 @@ function SignIn({}: Props) {
   const navigate = useNavigate();
   const location = useLocation();
   const from = "/home";
-
-  console.log(auth);
 
   let initialData: signInUserData = { email: "", password: "" };
   let initialErrors: handleSubmitErrors = { email: false, password: false };
@@ -104,6 +102,9 @@ function SignIn({}: Props) {
       // if submitError it's true change CSS.
     }
   };
+  useEffect(() => {
+    console.log("Error");
+  }, [submitError]);
 
   const handleChange = (e: any) => {
     let tempData = userData;
@@ -187,7 +188,7 @@ function SignIn({}: Props) {
               />
             </form>
             <div className="flex flex-row mt-10 gap-1">
-              <p>Not resgiter yet?</p>
+              <p>Not resgitered yet?</p>
               <Link
                 to="/signup"
                 className="text-indigo-700 cursor-pointer hover:text-indigo-600 transition-all"

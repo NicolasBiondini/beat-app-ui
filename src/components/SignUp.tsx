@@ -127,6 +127,10 @@ function SignUp({}: Props) {
     }
   };
 
+  useEffect(() => {
+    console.log("error");
+  }, [submitError]);
+
   return (
     <div className="w-screen m-0 flex flex-row flex-auto items-center  h-screen bg-gradient-to-r from-indigo-800 to-indigo-600">
       <Toaster position="top-right" reverseOrder={false} />

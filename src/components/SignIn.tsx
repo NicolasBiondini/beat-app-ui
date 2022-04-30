@@ -120,10 +120,10 @@ function SignIn({}: Props) {
   return auth.itsAuth ? (
     <Navigate to={"/home"} state={{ from: location }} replace />
   ) : (
-    <div className="w-screen m-0 flex flex-row flex-auto items-center  h-screen bg-gradient-to-r from-indigo-800 to-indigo-600">
+    <div className="w-screen m-0 flex flex-row flex-auto items-center  min-h-screen bg-gradient-to-r from-indigo-800 to-indigo-600">
       <Toaster position="top-right" reverseOrder={false} />
-      <section className="container m-auto h-5/6 flex flex-row align-middle justify-between  ">
-        <div className="p-10 mr-5 ml-5 w-full rounded-2xl lg:w-1/2 h-100 m-0 bg-white flex justify-center align-middle gap-10 lg:rounded-br-none lg:rounded-tr-none lg:m-0">
+      <section className="container m-auto lg:h-5/6 flex flex-row align-middle justify-between  ">
+        <div className="p-10 mr-5 ml-5 w-full rounded-2xl lg:w-1/2 min-h-100 m-0 bg-white flex justify-center align-middle gap-10 lg:rounded-br-none lg:rounded-tr-none lg:m-0">
           <div className="h-100 flex flex-col justify-center gap-10 lg:w-96 ">
             <h1 className=" font-bold text-4xl -mb-8">Sign In</h1>
             <p className="text-lg text-slate-700">
@@ -187,7 +187,7 @@ function SignIn({}: Props) {
                 value="Sign In"
               />
             </form>
-            <div className="flex flex-row mt-10 gap-1">
+            <div className="flex flex-row mt-16 gap-1 ">
               <p>Not resgitered yet?</p>
               <Link
                 to="/signup"

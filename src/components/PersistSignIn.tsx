@@ -8,9 +8,9 @@ function PersistSignIn() {
   const [isLoading, setIsLoading] = useState(true);
   const refresh = useRefreshToken();
   const { auth } = useAuth();
-  const [refreshTime, setRefreshTime] = useState(false);
+  // const [refreshTime, setRefreshTime] = useState(false);
   const [locationRefresh, setLocationRefresh] = useState(false);
-  const [time, setTime] = useState(0);
+  //const [time, setTime] = useState(0);
 
   let location = useLocation();
 
@@ -33,15 +33,16 @@ function PersistSignIn() {
       }
     };
 
-    !auth?.accessToken || refreshTime || locationRefresh
+    !auth?.accessToken || locationRefresh
       ? verifyRefreshToken()
       : setIsLoading(false);
 
     return () => {
       isMounted = false;
     };
-  }, [refreshTime, locationRefresh]);
+  }, [locationRefresh]);
 
+  /**
   useEffect(() => {
     setTimeout(() => {
       setRefreshTime(true);
@@ -51,7 +52,7 @@ function PersistSignIn() {
       }, 200);
     }, 840000);
   }, [time]);
-
+ */
   // 840000 14 minutes on miliseconds
 
   return (

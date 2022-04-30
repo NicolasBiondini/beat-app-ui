@@ -17,7 +17,7 @@ function NavMenuMobile({}: Props) {
   };
 
   return (
-    <nav className=" w-screen bg-indigo-100 lg:hidden flex flex-col justify-center items-center gap-6 py-5 overflow-y-hidden scroll-y-hidden">
+    <nav className=" w-screen bg-indigo-50 lg:hidden flex flex-col justify-center items-center gap-6 py-5 overflow-y-hidden scroll-y-hidden">
       <div
         className="cursor-pointer self-end pr-8"
         onClick={() => setToogleOpen(!toogleOpen)}

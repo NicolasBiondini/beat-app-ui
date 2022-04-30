@@ -23,8 +23,6 @@ type handleSubmitErrors = {
 };
 
 function SignUp({}: Props) {
-  const { toogleSetAuth } = useAuth();
-
   const navigate = useNavigate();
   const location = useLocation();
   const from = "/home";
@@ -132,7 +130,7 @@ function SignUp({}: Props) {
   }, [submitError]);
 
   return (
-    <div className="w-screen m-0 flex flex-row flex-auto items-center  h-screen bg-gradient-to-r from-indigo-800 to-indigo-600">
+    <div className="w-screen m-0 flex flex-row flex-auto items-center  min-h-screen bg-gradient-to-r from-indigo-800 to-indigo-600">
       <Toaster position="top-right" reverseOrder={false} />
       <section className="container m-auto h-5/6 flex flex-row align-middle justify-between  ">
         <div className="p-10 mr-5 ml-5 w-full rounded-2xl lg:w-1/2 h-100 m-0 bg-white flex justify-center align-middle gap-10 lg:rounded-br-none lg:rounded-tr-none lg:m-0">
